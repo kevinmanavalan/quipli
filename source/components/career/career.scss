@@ -1,0 +1,219 @@
+.qpli.career {
+  @media #{$xl} {
+    padding: rem(88) 0 rem(65) 0;
+  }
+  .container {
+    padding: rem(22) rem(16) rem(30) rem(16);
+    @media #{$xl} {
+      padding: rem(52) 0;
+    }
+  }
+  .career__wrapper {
+    overflow: hidden;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .career__item {
+    border-bottom: rem(1) solid rgba(29, 37, 44, 0.16);
+  }
+  .career__item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    color: $primary-color;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: rem(16);
+    @media #{$xl} {
+      flex-direction: row;
+    }
+  }
+  .career__title {
+    width: 100%;
+    margin: 0;
+    padding-top: rem(30);
+    padding-bottom: rem(20);
+    font-family: $secondary-font;
+    font-weight: 600;
+    @include font-size(18px, 28px);
+    position: relative;
+    @media #{$xl} {
+      @include font-size(20px, 30px);
+
+      width: 25%;
+      padding: rem(5) 0 0 rem(30);
+    }
+    span {
+      position: absolute;
+      width: rem(20);
+      height: rem(20);
+      right: 0;
+      background-image: url("../images/career-down-arrow.svg");
+      transition: 0.3s ease-in-out;
+      @media #{$xl} {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+  .active.career__title span {
+    transform: rotate(180deg);
+  }
+  .career__difference {
+    width: 100%;
+    border-radius: rem(20);
+    display: none;
+    @media #{$xl} {
+      display: flex;
+      margin: 0;
+      flex-direction: row;
+      width: 75%;
+    }
+    li {
+      padding-top: 0;
+      p {
+        font-weight: 400;
+        @include font-size(18px, 28px);
+      }
+    }
+  }
+  .career__open-view {
+    li {
+      padding-bottom: rem(16);
+    }
+  }
+  .career__closed-view {
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &::after {
+        content: "...";
+      }
+    }
+  }
+  .career__before {
+    padding: rem(16);
+    background: $secondary-offwhite;
+    h3 {
+      font-family: $secondary-font;
+      font-style: normal;
+      font-weight: 500;
+      @include font-size(20px, 30px);
+      @media #{$xl} {
+        display: none;
+      }
+    }
+    ul {
+      padding: rem(24) rem(24) rem(24) rem(56);
+    }
+    li {
+      position: relative;
+      span {
+        position: absolute;
+        left: rem(-30);
+        top: 0;
+      }
+    }
+    border-radius: rem(20);
+    @media #{$xl} {
+      margin: 0;
+      width: 50%;
+    }
+  }
+  .career__after {
+    padding: rem(16);
+    background: $secondary-color;
+    ul {
+      padding: rem(24) rem(24) rem(24) rem(56);
+    }
+    li {
+      position: relative;
+      span {
+        position: absolute;
+        left: rem(-30);
+        top: 0;
+      }
+    }
+    border-radius: rem(20);
+    @media #{$xl} {
+      margin: 0;
+      width: 50%;
+    }
+    h3 {
+      font-family: $secondary-font;
+      font-style: normal;
+      font-weight: 500;
+      @include font-size(20px, 30px);
+      @media #{$xl} {
+        display: none;
+      }
+    }
+  }
+  @media #{$xl} {
+    .career__after,
+    .career__before {
+      border-radius: 0;
+      padding-bottom: rem(28);
+    }
+    .career__item:first-of-type {
+      @media #{$xl} {
+        h3 {
+          display: block;
+          font-family: $secondary-font;
+          font-weight: 500;
+          @include font-size(32px, 42px);
+          text-align: center;
+          padding-top: rem(20);
+          padding-right: rem(27);
+        }
+        .career__title {
+          padding-top: rem(120);
+        }
+      }
+      .career__before,
+      .career__after {
+        border-radius: rem(20) rem(20) 0 0;
+      }
+      .career__after {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: rem(85);
+          height: rem(85);
+          top: rem(-1);
+          right: rem(-1);
+          background-image: url("../images/career-design-top.svg");
+          background-size: contain;
+        }
+      }
+    }
+    .career__item:last-of-type {
+      border: 0;
+      .career__before,
+      .career__after {
+        border-radius: 0 0 rem(20) rem(20);
+      }
+      .career__before {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: rem(36);
+          height: rem(36);
+          bottom: rem(-15);
+          left: rem(-13);
+          background-image: url("../images/career-design-bottom.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

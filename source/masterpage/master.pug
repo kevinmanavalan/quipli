@@ -1,0 +1,45 @@
+include _mixin
+-var page = ''
+-var bodyClass = ''
+-var pagetitle = ''
+-var sitetitle = ''
+block variables
+doctype html
+html(dir=lang == 'ar' ? 'rtl' : 'ltr')
+  head
+    title Quipli 
+    meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(name='keywords', content='Quipli')
+    meta(name='description', content="Quipli")
+    meta(name="title" content="Quipli")
+    meta(name="description" content="Quipli")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="WEBSITEURL.COM")
+    meta(property="og:title" content="Quipli")
+    meta(property="og:description" content="Quipli")
+    meta(property="og:image" content="Quipli/Image.Format")
+    meta(property="twitter:card" content="summary_large_image")
+    meta(property="twitter:url" content="WEBSITEURL.COM")
+    meta(property="twitter:title" content="Quipli")
+    meta(property="twitter:description" content="Quipli")
+    meta(property="twitter:image" content="Quipli/Image.Format")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="shortcut icon", href="../images/quipli-favicon.ico", type="image/vnd.microsoft.icon")
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap' rel='stylesheet')
+    link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
+    script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+
+    include _styleLinks
+    block stylelinks
+
+    block head
+  body(dir=lang == 'ar' ? 'rtl' : 'ltr', class=bodyClass)
+    block header
+    main.qpli.main
+      block body
+    block footer
+    include _scriptLinks
+    block foot

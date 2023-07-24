@@ -1,0 +1,26 @@
+$primary-font: "Inter", sans-serif;
+$secondary-font: "Sharp Grotesk";
+$primary-color: #1d252c;
+$secondary-color: #fcda01;
+$primary-white: #ffffff;
+$secondary-offwhite: #f4f5f7;
+$tab-animation-default: #fffbea;
+html,
+body {
+  font-family: "Open Sans";
+  font-size: rem(16);
+}
+body {
+  display: none;
+  font-family: $primary-font;
+  &.is-loaded {
+    display: block;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: none;
+}

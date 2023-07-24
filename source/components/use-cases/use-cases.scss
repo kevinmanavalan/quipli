@@ -1,0 +1,224 @@
+.qpli.use-cases {
+  padding-bottom: rem(17);
+  @media #{$xl} {
+    padding-bottom: 0;
+  }
+  .container {
+    padding: 0 rem(16);
+    @media #{$xl} {
+      padding: 0 0 rem(16) 0;
+    }
+  }
+  .use-cases__wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: $primary-color;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .use-cases__title {
+    max-width: rem(260);
+    padding-bottom: rem(24);
+    font-family: $secondary-font;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    @include font-size(24px, 34px);
+    @media #{$xl} {
+      max-width: rem(516);
+      padding-bottom: rem(63);
+      @include font-size(48px, 58px);
+    }
+  }
+  .use-cases__listing {
+    display: flex;
+    flex-direction: column;
+    @media #{$xl} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .use-cases__toolset {
+    padding-bottom: rem(10);
+    @media #{$xl} {
+      padding-bottom: rem(32);
+      width: 48.75%;
+    }
+    &--primary {
+      .l-btn {
+        margin-top: rem(-26);
+        padding: rem(15) 0;
+        @media #{$xl} {
+          margin-top: rem(-4);
+          padding: rem(25) 0;
+        }
+      }
+      figure {
+        --aspect-ratio: 696/305;
+        @media #{$xl} {
+          --aspect-ratio: 696/340;
+        }
+      }
+    }
+    &--secondary {
+      .l-btn {
+        margin-top: rem(-26);
+        padding: rem(15) 0;
+        @media #{$xl} {
+          margin-top: rem(-19);
+          padding: rem(25) 0;
+        }
+      }
+      figure {
+        --aspect-ratio: 696/280;
+        @media #{$xl} {
+          --aspect-ratio: 696/355;
+        }
+      }
+    }
+  }
+  .use-cases__toolset:nth-child(2) {
+    .use-cases__item:nth-child(3) {
+      @media #{$xl} {
+        padding-bottom: rem(16);
+      }
+    }
+  }
+  .use-cases__equipment {
+    padding: rem(24);
+    border: rem(1.26923) solid rgba(29, 37, 44, 0.1);
+    border-radius: rem(12.6923);
+    padding-bottom: rem(47);
+    @media #{$xl} {
+      padding: rem(40) rem(48);
+    }
+  }
+  .use-cases__equipment-title {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: rem(4);
+  }
+  .use-cases__logo {
+    width: rem(24);
+    height: rem(24);
+    @media #{$xl} {
+      width: rem(36);
+      height: rem(36);
+    }
+  }
+  .use-cases__heading {
+    font-family: $primary-font;
+    font-weight: 600;
+    @include font-size(20px, 28px);
+    text-align: left;
+    padding-left: rem(9);
+    padding-bottom: rem(4);
+    @media #{$xl} {
+      font-family: $secondary-font;
+      font-weight: 500;
+      @include font-size(32px, 42px);
+      padding-left: rem(16);
+      padding-bottom: rem(8);
+    }
+  }
+  .use-cases__item {
+    position: relative;
+    font-weight: 400;
+    @include font-size(16px, 24px);
+    padding-left: rem(33);
+    padding-top: rem(16);
+    @media #{$xl} {
+      @include font-size(18px, 26px);
+      padding-left: rem(50);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: rem(12);
+      height: rem(2);
+      background: $primary-color;
+      opacity: 0.2;
+      top: rem(27);
+      left: rem(6);
+      @media #{$xl} {
+        width: rem(20);
+      }
+    }
+  }
+  .l-btn {
+    background-color: $primary-color;
+    color: $secondary-color;
+    margin: rem(-20) 0 0;
+    position: relative;
+    @media #{$xl} {
+      font-weight: 600;
+      @include font-size(18px, 22px);
+    }
+  }
+  figure {
+    --aspect-ratio: 396/190;
+    padding-top: calc(100% / (var(--aspect-ratio)));
+    position: relative;
+    height: 0;
+    width: 100%;
+    @media #{$xl} {
+      --aspect-ratio: 696/380;
+    }
+  }
+  .use-cases__banner-light,
+  .use-cases__banner-heavy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(12.6923);
+    margin-top: rem(-20);
+    z-index: -1;
+  }
+  .aspect-box-light {
+    &::after {
+      position: absolute;
+      content: "";
+      left: rem(-3);
+      top: rem(25);
+      width: rem(51.25);
+      height: rem(56);
+      background-image: url("../images/light-tool-mobile-design.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media #{$xl} {
+        left: auto;
+        right: rem(-6);
+        top: rem(13);
+        width: rem(120);
+        height: rem(138);
+        background-image: url("../images/light-tool-desktop-design.svg");
+      }
+    }
+  }
+  .aspect-box-heavy {
+    &::after {
+      position: absolute;
+      content: "";
+      right: rem(-3);
+      top: rem(36);
+      width: rem(63);
+      height: rem(68.83);
+      background-image: url("../images/heavy-tool-mobile-design.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media #{$xl} {
+        right: auto;
+        left: rem(-7);
+        top: rem(82);
+        width: rem(140);
+        height: rem(152.96);
+        background-image: url("../images/heavy-tool-desktop-design.svg");
+      }
+    }
+  }
+}

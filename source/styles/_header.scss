@@ -1,0 +1,192 @@
+.qpli.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  .container {
+    margin-top: rem(20);
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-white;
+    border-radius: rem(16);
+    border: rem(1.5) solid rgba(29, 37, 44, 0.1);
+    position: relative;
+  }
+  .header__logo {
+    padding: rem(22) rem(16);
+    img {
+      width: rem(85.5);
+      height: rem(24);
+      @media #{$xl} {
+        width: rem(114);
+        height: rem(32);
+      }
+      object-fit: contain;
+    }
+    @media #{$xl} {
+      padding: 0 rem(18);
+    }
+  }
+  .header__menu {
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 100%;
+    padding: rem(20) ;
+    border-radius: rem(30) ;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+    background-color: $primary-white;
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @media #{$xl} {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .show-menu & {
+      top: rem(89);
+      margin-top: rem(-20) ;
+      padding-top: rem(30) ;
+      @media #{$xl} {
+        top: auto;
+      }
+    }
+
+    @media #{$xl} {
+      transform: none;
+      left: auto;
+      position: initial;
+      width: auto;
+      height: auto;
+      top: auto;
+      background: none;
+      padding: 0;
+      border: 0;
+    }
+  }
+  li {
+    padding-bottom: rem(16);
+    @media #{$xl} {
+      padding-bottom: 0;
+      hr {
+        display: none;
+      }
+    }
+  }
+  .header__accordion {
+    display: flex;
+    flex-direction: column;
+    @media #{$xl} {
+      &:hover {
+        & > .header__content {
+          @media #{$xl} {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+          }
+        }
+      }
+    }
+  }
+  .header__content {
+    @media #{$xl} {
+      display: block;
+      position: absolute;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .header__accordion-title {
+    font-weight: 500;
+    @include font-size(16px, 24px);
+    color: $primary-color;
+    @media #{$xl} {
+      padding: rem(0) rem(0) rem(0) rem(29);
+    }
+  }
+  @media #{$xl} {
+    .header__menu {
+      display: block;
+    }
+    .header__hamburger {
+      display: none;
+    }
+  }
+  .downarrow {
+    transition: 0.3s ease-in-out;
+  }
+  .active.downarrow {
+    transform: rotate(180deg);
+  }
+  .header__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .header__hamburger {
+    padding-left: rem(21);
+    padding-right: rem(21);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    .show-menu & {
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+  }
+  span {
+    display: block;
+    width: rem(22) ;
+    height: rem(3) ;
+    margin: rem(4)  auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1e1e1e;
+  }
+  .collapsed & {
+    .header__content {
+      display: none;
+    }
+  }
+}
+.qpli.header-overlay {
+  &::before {
+    content: "";
+    display: none;
+    background: $primary-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}

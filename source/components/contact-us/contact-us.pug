@@ -1,0 +1,23 @@
+.qpli.contact-us 
+    .container 
+        .contact-us__wrapper 
+            figure.contact-us__banner-wrapper(data-aos="fade-right") 
+                picture.contact-us__banner
+                    source(media="(min-width: 1199px)", srcset="../images/contact-us-banner-desktop.png")
+                    source(media="(min-width: 428px)", srcset="../images/contact-us-banner-mobile.png")
+                    img(src="../images/contact-us-banner-mobile.png", alt="contact us banner")
+            .contact-us__content(data-aos="fade-up") 
+                h3.contact-us__heading(data-aos="fade-left" data-aos-delay="300") Here’s what makes Quipli the right choice for your business
+                ul.contact-us__listing
+                    li(data-aos="fade-left" data-aos-delay="300") 
+                        img.contact-us__logo(src="../images/contact-us-headphone-person.svg", alt="headphone person")
+                        p.contact-us__descr We’re a partner, not a vendor. We’re here to work with you, respond quickly, and “surprise and delight” you with great service and growth opportunities.
+                    li(data-aos="fade-left" data-aos-delay="400") 
+                        img.contact-us__logo(src="../images/contact-us-page-share.svg", alt="page share")
+                        p.contact-us__descr Imagine a world in which everything you need is at your fingertips. Quipli is your new one-stop shop to manage and grow your rental business, while enjoying peace of mind along the way.
+                    li(data-aos="fade-left" data-aos-delay="500") 
+                        img.contact-us__logo(src="../images/contact-us-page-view.svg", alt="page view")
+                        p.contact-us__descr 1995 was a long time ago. Software has come a long way. You deserve a modern user experience that works for you and that releases great new functionality weekly, not annually.
+                .contact-us__cta(data-aos="fade-left" data-aos-delay="600")
+                    +button("Book a Demo", "#", true, "#1d252c")
+                    

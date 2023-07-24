@@ -1,0 +1,11 @@
+.container {
+  max-width: 100%;
+  padding-left: rem(16);
+  padding-right: rem(16);
+  margin: 0 auto;
+  &--lg {
+  }
+  @media #{$xl} {
+   max-width: rem(1280);
+  }
+}

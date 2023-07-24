@@ -1,0 +1,19 @@
+.qpli.supportbrands {
+  .supportbrands__carousel {
+    margin: rem(34) 0 rem(34) 0;
+    @media #{$md} {
+      height: rem(48);
+      max-width: rem(1091);
+      margin: rem(48) auto rem(75) auto;
+    }
+  }
+  .supportbrands__item {
+    margin: 0 rem(11);
+    @media #{$md} {
+      margin:0 rem(40);
+    }
+  }
+  img{
+    object-fit: contain;
+  }
+}

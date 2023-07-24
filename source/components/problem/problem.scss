@@ -1,0 +1,83 @@
+.qpli.problem {
+  .container {
+    padding-bottom: rem(48);
+    @media #{$xl} {
+      padding:0 0 rem(140) 0;
+      max-width: rem(1280);
+    }
+  }
+  .problem__wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: $primary-color;
+    @media #{$xl} {
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .problem__banner {
+    z-index: 1;
+    width: 100%;
+    margin-bottom: rem(-254.5);
+    @media #{$xl} {
+      position: absolute;
+      order: 2;
+      width: rem(550);
+      height: auto;
+      margin-bottom: 0;
+      right: 0;
+    }
+  }
+  .problem__statement {
+    background: $secondary-offwhite;
+    border-radius: rem(20);
+    margin-top: rem(-10);
+    padding: rem(295) rem(16) rem(40) rem(16);
+    p {
+      padding-top: rem(12);
+      margin-bottom: 0;
+      @include font-size(16px, 24px);
+      strong {
+        font-weight: 600;
+      }
+    }
+    @media #{$xl} {
+      width: 75%;
+      order: 1;
+      padding: rem(56) rem(295) rem(56) rem(56);
+      p {
+        padding-top: rem(17);
+        @include font-size(18px, 28px);
+      }
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: rem(158);
+        height: rem(93);
+        top: rem(371);
+        right: rem(15);
+        background: $primary-white;
+      }
+    }
+  }
+  .problem__logo {
+    width: rem(44);
+  }
+  h2 {
+    padding-top: rem(24);
+    font-family: $secondary-font;
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    @include font-size(24px, 32px);
+    color: $primary-color;
+    margin-bottom: 0;
+    @media #{$xl} {
+      padding-top: rem(28);
+      @include font-size(40px, 50px);
+    }
+  }
+}

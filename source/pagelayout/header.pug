@@ -1,0 +1,53 @@
+header.qpli.header(data-aos="fade-down")
+  .container
+    .header__wrap
+      .header__logo(data-aos="fade-right" data-aos-delay="700")
+        img(src="images/quipli_logo.svg", alt="quipli logo" width="114" height="32")
+      nav.header__menu
+        ul
+          li.header__accordion
+            a.header__accordion-title(href="#") Solutions
+              i   
+                +downarrow
+            .header__content   
+              include ../components/submenu/submenu--solutions.pug
+          li 
+            hr
+          li.header__accordion
+            a.header__accordion-title(href="#") Use Cases 
+              i   
+                +downarrow
+            .header__content 
+              include ../components/submenu/submenu--solutions.pug
+          li 
+            hr
+          li.header__accordion
+            a.header__accordion-title(href="#") Reviews 
+          li 
+            hr
+          li.header__accordion
+            a.header__accordion-title(href="#") About Us 
+              i   
+                +downarrow
+            .header__content   
+              include ../components/submenu/submenu--solutions.pug
+          li 
+            hr
+          li.header__accordion
+            a.header__accordion-title(href="#") Resources
+              i   
+                +downarrow
+            .header__content   
+              include ../components/submenu/submenu--solutions.pug 
+          li 
+            hr
+      .header__cta(data-aos="fade-left" data-aos-delay="700")
+        +button('Book a Demo', '/', false, "")
+        button(role="button" type="button").header__hamburger.js-burgermenu
+          span
+          span
+          span
+span.qpli.header-overlay
+    
+
+

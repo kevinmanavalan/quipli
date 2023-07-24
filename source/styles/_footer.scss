@@ -1,0 +1,198 @@
+.qpli.footer {
+  position: relative;
+  overflow: hidden;
+  .container {
+    padding: 0;
+    width: 100%;
+    @media #{$xl} {
+      max-width: none;
+    }
+  }
+  .footer__wrap {
+    border-radius: rem(20) rem(20) rem(0) rem(0);
+    background: $primary-color;
+    display: flex;
+    flex-direction: column;
+    padding: rem(40) rem(16);
+    @media #{$xl} {
+      padding: rem(80) rem(112) rem(40) rem(80);
+    }
+  }
+  .footer__main {
+    @media #{$xl} {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: rem(1);
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.06);
+    }
+  }
+  .footer__descr-section {
+    img {
+      padding-bottom: rem(20);
+      @media #{$xl} {
+        width: rem(140);
+      }
+    }
+    p {
+      padding-top: rem(22);
+      font-weight: 400;
+      @include font-size(16px, 24px);
+      color: rgba(255, 255, 255, 0.8);
+    }
+    @media #{$xl} {
+      width: 30%;
+    }
+  }
+  .footer__listing {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__col {
+    font-weight: 600;
+    position: relative;
+    @include font-size(20px, 30px);
+    color: $primary-white;
+    padding-bottom: rem(32);
+    &--company {
+      order: 1;
+      padding-right: rem(30);
+      &::after {
+        right: 0;
+        top: 0;
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: rem(0.8);
+        background: rgba(255, 255, 255, 0.06);
+      }
+    }
+    &--rental {
+      order: 3;
+      padding-right: rem(40);
+    }
+    &--community {
+      order: 2;
+      padding-left: rem(40);
+    }
+    @media #{$sm} {
+      &--company {
+        order: 1;
+        padding-right: rem(72);
+        &::after {
+          right: 0;
+          top: 0;
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: rem(0.8);
+          background: rgba(255, 255, 255, 0.06);
+        }
+      }
+      &--rental {
+        order: 3;
+        padding-right: rem(40);
+      }
+      &--community {
+        order: 2;
+        padding-left: rem(40);
+      }
+    }
+    @media #{$smd} {
+      &--company {
+        order: 1;
+      }
+      &--community {
+        order: 2;
+      }
+      &--community {
+        order: 3;
+        padding-left: 0;
+      }
+      &--rental {
+        padding: 0 rem(40);
+        &::after {
+          right: 0;
+          top: 0;
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: rem(0.8);
+          background: rgba(255, 255, 255, 0.06);
+        }
+      }
+    }
+    @media #{$md} {
+      &--community {
+        padding-left: rem(72);
+      }
+    }
+    li:nth-child(1) {
+      padding-top: rem(24);
+    }
+    li {
+      padding-top: rem(8);
+      font-weight: 400;
+      @include font-size(16px, 26px);
+      color: rgba(255, 255, 255, 0.8);
+      @media #{$xl} {
+        padding-top: rem(10);
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-size: contain;
+    @media #{$xs} {
+      right: rem(0);
+      top: rem(-1);
+      width: rem(65);
+      height: rem(65);
+      background-image: url("../images/menu-design.svg");
+    }
+    @media #{$xl} {
+      width: rem(151);
+      height: rem(151);
+      left: rem(333);
+      top: rem(-1);
+      background-image: url("../images/footer_design.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  .footer__rights {
+    width: 100%;
+    padding-top: rem(58);
+    p {
+      font-weight: 500;
+      @include font-size(16px, 26px);
+      color: rgba(255, 255, 255, 0.64);
+      margin: 0;
+      @media #{$xl} {
+        @include font-size(18px, 24px);
+      }
+    }
+    @media #{$lg} {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .footer__rights-secondline {
+    display: flex;
+    flex-direction: row;
+    margin-right: rem(-30);
+    p {
+      padding-left: rem(35);
+    }
+  }
+}

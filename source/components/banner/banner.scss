@@ -1,0 +1,188 @@
+.qpli.banner {
+  .container {
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .banner__wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $primary-color;
+    margin-top: rem(-38);
+    position: relative;
+    padding: rem(101) rem(20) rem(120) rem(20);
+    border-radius: rem(20);
+    @media #{$xl} {
+      margin-top: rem(-25);
+      padding: rem(100) rem(20) rem(278) rem(20);
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-size: contain;
+      left: rem(-16);
+      top: rem(57);
+      width: rem(67);
+      height: rem(67);
+      background-image: url("../images/banner-mobile-design-left.svg");
+      background-repeat: no-repeat;
+      @media #{$xl} {
+        width: rem(222);
+        height: rem(223);
+        left: rem(-40);
+        top: rem(146);
+        background-image: url("../images/banner-desktop-design-left.svg");
+      }
+    }
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      background-size: contain;
+      width: rem(79);
+      height: rem(89);
+      right: rem(-29);
+      bottom: rem(351);
+      background-image: url("../images/banner-mobile-design-right.svg");
+      background-repeat: no-repeat;
+      @media #{$xl} {
+        width: rem(223);
+        height: rem(223);
+        right: rem(-64);
+        bottom: rem(79);
+        background-image: url("../images/banner-desktop-design-right.svg");
+      }
+    }
+  }
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media #{$xl} {
+      max-width: rem(844);
+    }
+  }
+  h1 {
+    text-align: center;
+    font-family: $secondary-font;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: rem(16);
+    @include font-size(40, 50);
+    color: $primary-white;
+    max-width: 93%;
+    @media #{$xl} {
+      padding-bottom: rem(19);
+      max-width: unset;
+      @include font-size(72, 84);
+    }
+  }
+  .banner__description {
+    font-weight: 400;
+    @include font-size(16, 26);
+    color: $primary-white;
+    padding-bottom: rem(23);
+    max-width: 94%;
+    @media #{$xl} {
+      max-width: unset;
+      @include font-size(20, 32);
+      padding-bottom: rem(33);
+    }
+  }
+  .l-btn {
+    margin: 0;
+    @include font-size(16, 19);
+    padding: rem(20) rem(37);
+    @media #{$xl} {
+      padding: rem(20) rem(45);
+    }
+  }
+  .banner__collection {
+    width: 100%;
+    padding: rem(38) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$xl} {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 0;
+      padding-top: rem(48);
+    }
+  }
+  .banner__primary {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    .banner__set:nth-child(1) {
+      padding-right: rem(16);
+      @media #{$xl} {
+        padding-right: 0;
+        padding-left: rem(5);
+      }
+    }
+    .banner__set:nth-child(2) {
+      padding-left: rem(16);
+      @media #{$xl} {
+        padding-left: 0;
+        padding-right: rem(5);
+        order: 3;
+      }
+    }
+    @media #{$xl} {
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  }
+  .banner__set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: rem(25);
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .banner__logo {
+    padding-bottom: rem(11);
+  }
+  .banner__detailed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .banner__numerical {
+    padding-right: rem(8);
+    font-weight: 600;
+    @include font-size(16, 19);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .banner__devices {
+    width: 100%;
+    margin-top: rem(-141);
+    z-index: 1;
+    position: relative;
+
+    picture {
+      width: 100%;
+      img {
+        width: 100%;
+        margin: 0 auto;
+        @media #{$xl} {
+          width: 91.5%;
+        }
+      }
+    }
+    @media #{$xl} {
+      margin-top: rem(-300);
+    }
+  }
+}

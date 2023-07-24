@@ -1,0 +1,103 @@
+.qpli.submenu {
+  .submenu__wrapper {
+    padding: rem(16);
+    background: $primary-white;
+    @media #{$xl} {
+      border-radius: rem(20);
+      display: flex;
+      padding: rem(40);
+      position: absolute;
+      max-width: rem(1280);
+      width: calc(100%);
+      left: 50%;
+      top: rem(67);
+      z-index: 999;
+      transform: translateX(-50%);
+    }
+    ul {
+      @media #{$xl} {
+        column-count: 2;
+        width: 56%;
+        position: relative;
+      }
+      li {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-bottom: rem(12);
+        @media #{$xl} {
+          align-items: center;
+          width: 86.33%;
+          margin: rem(0) rem(0) rem(40);
+        }
+        p {
+          padding-left: rem(16);
+        }
+      }
+    }
+  }
+  .submenu__icon {
+    background: $primary-color;
+    border-radius: rem(8);
+    padding: rem(10);
+  }
+  .submenu__tab {
+    display: none;
+    position: relative;
+    @media #{$xl} {
+      display: block;
+      width: 44%;
+      background-color: $primary-color;
+      border-radius: rem(20);
+      padding: rem(40);
+    }
+  }
+  .submenu__tab-descr{
+    font-weight: 400;
+    @include font-size(16px, 24px);
+    margin-bottom: rem(22);
+    color: #FFFFFF;
+  }
+  .submenu__tab-icon {
+    margin-bottom: rem(32);
+    width: rem(84);
+    height: rem(84);
+    background-image: url("../images/menu-design-yellow.png");
+    background-size: contain;
+    position: relative;
+    img{
+      position: absolute;
+      top: rem(43);
+      left: rem(14);
+    }
+  }
+  .submenu__tab-more{
+    display: flex;
+    flex-direction: row;
+    a{
+      font-weight: 600;
+      @include font-size(18px, 22px);
+      color: #FCDA01;
+    }
+  }
+  .submenu__tab-title {
+    margin-bottom: rem(12);
+    font-family: $secondary-font;
+    font-weight: 500;
+    @include font-size(24px, 36px);
+    color: #ffffff;
+  }
+  
+  .submenu__tab::before {
+    position: absolute;
+    display: block;
+    right: rem(-1);
+    top: rem(-1);
+    content: "";
+    width: rem(108);
+    height: rem(108);
+    background-image: url("../images/menu-design.svg");
+    background-size: contain;
+  }
+}

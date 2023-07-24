@@ -1,0 +1,112 @@
+.qpli.faq {
+  .container {
+    padding: 0 rem(16);
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .faq__wrapper {
+    overflow: hidden;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: rem(48);
+    @media #{$xl} {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: rem(135);
+    }
+  }
+  .faq__heading__wrapper {
+    max-width: rem(295);
+    @media #{$xl} {
+      padding-top: rem(20);
+      max-width: 34.55%;
+    }
+  }
+  .faq__questions-wrapper {
+    ul {
+      padding-top: rem(25);
+    }
+    @media #{$xl} {
+      width: 59.26%;
+    }
+  }
+  .faq__heading {
+    font-family: $secondary-font;
+    font-weight: 500;
+    @include font-size(32px, 42px);
+    @media #{$xl} {
+      @include font-size(40px, 50px);
+    }
+  }
+  .faq__question-wrapper {
+    border-bottom: rem(1) solid rgba(29, 37, 44, 0.12);
+    @media #{$xl} {
+      padding: rem(20) 0;
+    }
+  }
+  .faq__question {
+    color: $primary-color;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: rem(15) 0 rem(12) 0;
+    @include font-size(16px, 26px);
+    @media #{$xl} {
+      @include font-size(20px, 30px);
+      padding-bottom: rem(16);
+    }
+    .faq__question-arrow {
+      position: absolute;
+      width: rem(20);
+      height: rem(20);
+      right: 0;
+      background-image: url("../images/career-down-arrow.svg");
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .active.faq__question-arrow {
+    transform: rotate(180deg);
+  }
+  .faq__answers {
+    font-weight: 400;
+    @include font-size(16px, 26px);
+    @media #{$xl} {
+      @include font-size(18px, 28px);
+    }
+    li {
+      @media #{$xl} {
+        padding-bottom: rem(18);
+      }
+    }
+  }
+  .faq__listing-controller {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .faq__listing-controller {
+    color: $primary-color;
+    font-weight: 600;
+    padding-top: rem(16);
+    @include font-size(18px, 22px);
+    span {
+      margin-left: rem(13);
+      position: absolute;
+      width: rem(20);
+      height: rem(20);
+      background-image: url("../images/career-down-arrow.svg");
+    }
+    @media #{$xl} {
+      padding-top: rem(24);
+    }
+  }
+  .active.faq__listing-controller span {
+    background-image: url("../images/career-up-arrow.svg");
+  }
+}

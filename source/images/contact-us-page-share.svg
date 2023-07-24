@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1614_2424)">
+<path d="M6.66536 17.3335H1.33203V28.0002H6.66536V17.3335Z" stroke="#FCDA01" stroke-width="2" stroke-linejoin="round"/>
+<path d="M6.66797 18.6665H17.3346L18.668 23.9998H25.428C25.8938 23.9994 26.351 24.1256 26.7508 24.3648C27.1505 24.604 27.4778 24.9473 27.6977 25.358C27.9176 25.7686 28.0217 26.2313 27.9992 26.6966C27.9765 27.162 27.828 27.6124 27.5693 27.9998L13.3346 30.6665L6.66797 26.6665" stroke="#FCDA01" stroke-width="2" stroke-linejoin="round"/>
+<path d="M18.6667 24H12" stroke="#FCDA01" stroke-width="2" stroke-linejoin="round"/>
+<path d="M4 13.3335V1.3335H30.6667V20.0002" stroke="#FCDA01" stroke-width="2" stroke-linejoin="round"/>
+<path d="M9.33333 6.66667C10.0697 6.66667 10.6667 6.06971 10.6667 5.33333C10.6667 4.59696 10.0697 4 9.33333 4C8.59696 4 8 4.59696 8 5.33333C8 6.06971 8.59696 6.66667 9.33333 6.66667Z" fill="#FCDA01"/>
+<path d="M14.6654 6.66667C15.4018 6.66667 15.9987 6.06971 15.9987 5.33333C15.9987 4.59696 15.4018 4 14.6654 4C13.929 4 13.332 4.59696 13.332 5.33333C13.332 6.06971 13.929 6.66667 14.6654 6.66667Z" fill="#FCDA01"/>
+<path d="M4 9.3335H30.6667" stroke="#FCDA01" stroke-width="2" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1614_2424">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

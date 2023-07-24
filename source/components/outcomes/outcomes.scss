@@ -1,0 +1,323 @@
+.qpli.outcomes {
+  .container {
+    padding: 0 0 rem(48) 0;
+    @media #{$xl} {
+      padding: 0 0 rem(144) 0;
+    }
+  }
+  .outcomes__wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $primary-color;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    @media #{$xl} {
+      padding-top: rem(67);
+    }
+  }
+  .outcomes__title {
+    max-width: rem(332);
+    font-family: $secondary-font;
+    font-weight: 500;
+    @include font-size(24px, 34px);
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: rem(32);
+    @media #{$xl} {
+      padding-bottom: rem(32);
+      max-width: rem(640);
+      @include font-size(48px, 66px);
+    }
+  }
+  .outcomes__trans {
+    padding-bottom: rem(5);
+    @media #{$xl} {
+      .outcomes__descr {
+        order: 1;
+      }
+      .outcomes__banner {
+        order: 2;
+      }
+    }
+  }
+  .tab {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    @media #{$xl} {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: rem(43);
+      padding-top: rem(81);
+    }
+  }
+  .outcomes__banner {
+    padding-bottom: rem(32);
+    @media #{$xl} {
+      width: 54.45%;
+    }
+  }
+  .outcomes__descr {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: rem(16);
+    padding-right: rem(16);
+    padding-top: rem(4);
+    @media #{$xl} {
+      padding-left: 0;
+      padding-right: rem(10);
+      width: 39.29%;
+    }
+  }
+  .outcomes__logo {
+    display: none;
+    @media #{$xl} {
+      display: block;
+      width: rem(80);
+      height: rem(80);
+      margin-bottom: rem(32);
+      background-image: url("../images/outcomes-icon-yellow-background.png");
+      background-size: contain;
+      position: relative;
+      img {
+        position: absolute;
+        width: rem(24);
+        height: rem(24);
+        top: rem(41);
+        left: rem(15);
+      }
+    }
+  }
+  .outcomes__visibility {
+    padding-bottom: rem(38);
+    @media #{$xl} {
+      padding-bottom: rem(4);
+    }
+  }
+  .outcomes__heading {
+    font-weight: 600;
+    @include font-size(20px, 28px);
+    padding-bottom: rem(12);
+    max-width: rem(316);
+    @media #{$xl} {
+      max-width: none;
+      font-weight: 500;
+      @include font-size(32px, 40px);
+      padding-bottom: rem(16);
+    }
+  }
+  .outcomes__content {
+    font-weight: 400;
+    @include font-size(16px, 24px);
+    padding-bottom: rem(20);
+    @media #{$xl} {
+      @include font-size(18px, 28px);
+      padding-bottom: rem(5);
+    }
+  }
+  .l-btn {
+    background: none;
+    text-align: left;
+    padding: rem(10) rem(2);
+  }
+  .outcomes__more {
+    display: none;
+    @media #{$xl} {
+      font-family: $secondary-font;
+      display: block;
+      font-weight: 500;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: rem(60);
+      max-width: rem(640);
+      @include font-size(48px, 66px);
+    }
+  }
+  .outcomes__tab {
+    overflow: hidden;
+    padding: 0 rem(16);
+    border-radius: rem(12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @media #{$xl} {
+      padding: 0;
+    }
+  }
+  .outcomes__tab-nav-wrapper {
+    position: relative;
+    width: 100%;
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: rem(20);
+      content: "";
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      background-color: $secondary-color;
+    }
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: rem(20);
+      content: "";
+      top: 0;
+      border-radius: rem(12);
+      left: 0;
+      z-index: 0;
+      background-color: $tab-animation-default;
+    }
+  }
+  .outcomes__tab-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+  }
+  li {
+    width: 20%;
+    border-radius: 0 0 0 0;
+    cursor: pointer;
+    padding: rem(16) rem(27) rem(16) rem(28);
+    background: $tab-animation-default;
+    display: flex;
+    justify-content: center;
+    a {
+      display: flex;
+      flex-direction: row;
+    }
+    p {
+      display: none;
+      @media #{$xl} {
+        display: inline-block;
+        white-space: nowrap;
+        order: 2;
+        color: $primary-color;
+        font-weight: 500;
+        @include font-size(18px, 26px);
+        padding-left: rem(12);
+      }
+    }
+  }
+  li:first-child {
+    border-top-left-radius: rem(12);
+  }
+  li:last-child {
+    border-top-right-radius: rem(12);
+  }
+
+  li.active {
+    background-color: $secondary-color;
+    border-radius: rem(12) rem(12) 0 0;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: rem(16);
+      left: 0;
+      width: 100%;
+      background-color: $secondary-color;
+      bottom: rem(-15);
+      z-index: 3;
+    }
+  }
+  li.is-prev {
+    border-bottom-right-radius: rem(12);
+  }
+  li.is-next {
+    border-bottom-left-radius: rem(12);
+  }
+  .outcomes__tab-content-wrapper {
+    width: 100%;
+    background-color: $secondary-color;
+    padding: rem(16) rem(16) rem(25) rem(16);
+    border-radius: rem(12);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: rem(20);
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: $tab-animation-default;
+    }
+    @media #{$xl} {
+      padding: rem(16);
+    }
+  }
+  .outcomes__tab-content-listing {
+    z-index: 2;
+  }
+  .outcomes__tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$xl} {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: rem(80) rem(30) rem(30) rem(30);
+    }
+  }
+  .outcomes__tab-banner {
+    object-fit: contain;
+    padding-bottom: rem(25);
+    @media #{$xl} {
+      order: 2;
+    }
+  }
+  .outcomes__tab-subsection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    p {
+      width: 100%;
+    }
+    @media #{$xl} {
+      padding-right: rem(65);
+      padding-left: rem(32);
+    }
+  }
+  .outcomes__tab-logo {
+    display: none;
+    width: rem(80);
+    height: rem(80);
+    position: relative;
+    background-image: url("../images/outcomes-black-design.svg");
+    @media #{$xl} {
+      display: block;
+      margin-bottom: rem(32);
+    }
+    img {
+      position: absolute;
+      top: rem(42);
+      left: rem(14);
+    }
+  }
+  .outcomes__heading {
+    width: 100%;
+    font-family: $secondary-font;
+    font-weight: 500;
+    @include font-size(18px, 26px);
+    @media #{$xl} {
+      max-width: rem(503);
+      @include font-size(32px, 42px);
+    }
+  }
+  .outcomes__descr {
+    font-weight: 400;
+    @include font-size(16px, 24px);
+    @media #{$xl} {
+      @include font-size(18px, 28px);
+    }
+  }
+}
