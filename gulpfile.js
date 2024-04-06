@@ -15,7 +15,7 @@ var fs = require('fs'),
     pug = require('gulp-pug'),
     pugInheritance = require('gulp-pug-inheritance'),
     postcss = require('gulp-postcss'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     sassGlob = require('gulp-sass-glob'),
     cssnano = require('gulp-cssnano'),
     extReplace = require('gulp-ext-replace'),
@@ -128,7 +128,7 @@ function compileSass() {
     'source/styles/*.scss',
     'source/styles/_*.scss'
   ])
-  
+
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(dest(dist + 'css'))
